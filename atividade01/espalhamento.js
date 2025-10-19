@@ -1,10 +1,13 @@
-const lista = ['pão', 'queijo', 'presunto', 'café', 'leite'];
-const novaLista = [...lista]; //copia a lista principal
+const misto = ['pão', 'queijo', 'presunto'];
 
-novaLista.push('capuccino', 'açúcar'); //adiciona no final
+function adicionarElemento(lista, ...novoElemento){
+    return [...lista, ...novoElemento];
+}
 
-const maisItens = ['banana', ...novaLista, 'maça']; //desmembrando 
+const novaLista = adicionarElemento (misto, 'tomate', 'oregano');
 
-console.log('Lista principal:', lista);
-console.log('Nova lista:', novaLista);
-console.log('Lista:', maisItens);
+const [primeiro, segundo, terceiro, quarto, quinto] = novaLista;
+
+console.log('primeira lista: ', misto);
+console.log('lista com novos elementos: ', novaLista);
+console.log(`itens desestruturados: ${primeiro}, ${segundo}, ${terceiro}, ${quarto}, ${quinto}`);
