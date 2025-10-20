@@ -1,10 +1,10 @@
 const misto = ['pão', 'queijo', 'presunto'];
 
-function adicionarElemento(lista, ...novoElemento){
-    return [...lista, ...novoElemento];
+function adicionarElemento(lista, ...novoElemento){ //rest (junta)
+    return [...lista, ...novoElemento]; //spread (espalha)
 }
 
-const novaLista = adicionarElemento (misto, 'tomate', 'oregano');
+const novaLista = adicionarElemento (misto, 'tomate', 'orégano');
 
 const [primeiro, segundo, terceiro, quarto, quinto] = novaLista;
 
